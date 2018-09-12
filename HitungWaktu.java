@@ -12,6 +12,6 @@ public class HitungWaktu{
         // System.out.println("endTime   : " + endTime);
     }
     public static void runTime() {
-        System.out.println("runTime   : " + runTime);
+        System.out.print(runTime);
     }
 }

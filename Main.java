@@ -1,40 +1,47 @@
 class Main {
     public static void main(String[] args) {
 
-        // Inisialisasi array-nya
-        MyArray untukBubble = new MyArray(10000);
-        MyArray untukSelection = new MyArray(10000);
-        MyArray untukInsertion = new MyArray(10000);
 
-        // Isi dengan nilai random antara 1-100
-        untukBubble.randomArray();
-        untukSelection.randomArray();
-        untukInsertion.randomArray();
+        int panjangArray = 10;
+        int banyakSample = 3;
 
+        System.out.println("Membandingkan kecepatan 3 algoritma sorting (dalam nanoSecond)\n");
+        System.out.println("\t\tbubbleSort\tselectionSort\tinsertionSort");
 
+        // Looping sebanyak sample
+        for (int i = 1; i <= banyakSample; i++) {
+            // Inisialisasi array-nya
+            MyArray untukBubble = new MyArray(panjangArray);
+            MyArray untukSelection = new MyArray(panjangArray);
+            MyArray untukInsertion = new MyArray(panjangArray);
 
-        // untukBubble.showArray();
-        // Hitung waktu sorting dengan bubbleSort
-        HitungWaktu.startTime();
-        Sorting.bubbleSort(untukBubble.getArr());
-        HitungWaktu.endTime();
-        HitungWaktu.runTime();
-        // untukBubble.showArray();
+            // Isi ketiga array dengan nilai random antara 1-100
+            untukBubble.randomArray();
+            untukSelection.randomArray();
+            untukInsertion.randomArray();
 
-        // untukSelection.showArray();
-        // Hitung waktu sorting dengan selectionSort
-        HitungWaktu.startTime();
-        Sorting.selectionSort(untukSelection.getArr());
-        HitungWaktu.endTime();
-        HitungWaktu.runTime();
-        // untukSelection.showArray();
-        
-        // untukInsertion.showArray();
-        // Hitung waktu sorting dengan insertionSort
-        HitungWaktu.startTime();
-        Sorting.insertionSort(untukInsertion.getArr());
-        HitungWaktu.endTime();
-        HitungWaktu.runTime();
-        // untukInsertion.showArray();
+            System.out.print("sample " + i +":\t");
+
+            // Hitung waktu sorting dengan bubbleSort
+            HitungWaktu.startTime();
+            Sorting.bubbleSort(untukBubble.getArr());
+            HitungWaktu.endTime();
+            HitungWaktu.runTime();
+            System.out.print("\t\t");
+
+            // Hitung waktu sorting dengan selectionSort
+            HitungWaktu.startTime();
+            Sorting.selectionSort(untukSelection.getArr());
+            HitungWaktu.endTime();
+            HitungWaktu.runTime();
+            System.out.print("\t\t");
+
+            // Hitung waktu sorting dengan insertionSort
+            HitungWaktu.startTime();
+            Sorting.insertionSort(untukInsertion.getArr());
+            HitungWaktu.endTime();
+            HitungWaktu.runTime();
+            System.out.println();
+        }
     }
 }
