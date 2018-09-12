@@ -14,4 +14,15 @@ public class HitungWaktu{
     public static void runTime() {
         System.out.print(runTime);
     }
+
+    public static void startTimeM() {
+        startTime = System.currentTimeMillis();
+        // System.out.println("startTime : "+startTime);
+    }
+
+    public static void endTimeM() {
+        endTime = System.currentTimeMillis();
+        runTime = endTime - startTime;
+        // System.out.println("endTime : " + endTime);
+    }
 }

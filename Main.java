@@ -2,10 +2,10 @@ class Main {
     public static void main(String[] args) {
 
 
-        int panjangArray = 10;
-        int banyakSample = 3;
+        int panjangArray = 30000;
+        int banyakSample = 30;
 
-        System.out.println("Membandingkan kecepatan 3 algoritma sorting (dalam nanoSecond)\n");
+        System.out.println("Membandingkan kecepatan 3 algoritma sorting (dalam milliSecond)\n");
         System.out.println("\t\tbubbleSort\tselectionSort\tinsertionSort");
 
         // Looping sebanyak sample
@@ -23,23 +23,23 @@ class Main {
             System.out.print("sample " + i +":\t");
 
             // Hitung waktu sorting dengan bubbleSort
-            HitungWaktu.startTime();
+            HitungWaktu.startTimeM();
             Sorting.bubbleSort(untukBubble.getArr());
-            HitungWaktu.endTime();
+            HitungWaktu.endTimeM();
             HitungWaktu.runTime();
             System.out.print("\t\t");
 
             // Hitung waktu sorting dengan selectionSort
-            HitungWaktu.startTime();
+            HitungWaktu.startTimeM();
             Sorting.selectionSort(untukSelection.getArr());
-            HitungWaktu.endTime();
+            HitungWaktu.endTimeM();
             HitungWaktu.runTime();
             System.out.print("\t\t");
 
             // Hitung waktu sorting dengan insertionSort
-            HitungWaktu.startTime();
+            HitungWaktu.startTimeM();
             Sorting.insertionSort(untukInsertion.getArr());
-            HitungWaktu.endTime();
+            HitungWaktu.endTimeM();
             HitungWaktu.runTime();
             System.out.println();
         }
