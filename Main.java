@@ -15,7 +15,7 @@ class Main {
             MyArray untukSelection = new MyArray(panjangArray);
             MyArray untukInsertion = new MyArray(panjangArray);
 
-            // Isi ketiga array dengan nilai random antara 1-100
+            // Isi ketiga array dengan nilai random antara 1-100000
             untukBubble.randomArray();
             untukSelection.randomArray();
             untukInsertion.randomArray();
