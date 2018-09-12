@@ -14,7 +14,7 @@ class MyArray {
     public void randomArray() {
         Random rand = new Random();
         for (int i = 0; i < this.arr.length; i++) {
-            this.arr[i] = rand.nextInt(100) + 1;
+            this.arr[i] = rand.nextInt(100000) + 1;
         }
     }
 

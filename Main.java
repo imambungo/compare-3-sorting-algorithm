@@ -2,7 +2,7 @@ class Main {
     public static void main(String[] args) {
 
 
-        int panjangArray = 30000;
+        int panjangArray = 100000;
         int banyakSample = 30;
 
         System.out.println("Membandingkan kecepatan 3 algoritma sorting (dalam milliSecond)\n");
