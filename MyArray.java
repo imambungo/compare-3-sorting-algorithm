@@ -7,6 +7,10 @@ class MyArray {
         this.arr = new int[x];
     }
 
+    public int[] getArr() {
+        return this.arr;
+    }
+
     public void randomArray() {
         Random rand = new Random();
         for (int i = 0; i < this.arr.length; i++) {
@@ -18,5 +22,6 @@ class MyArray {
         for (int i = 0; i < this.arr.length; i++) {
                 System.out.print(this.arr[i] + " ");
         }
+        System.out.println();
     }
 }
